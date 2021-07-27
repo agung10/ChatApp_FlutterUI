@@ -4,7 +4,7 @@ import 'package:chat/constants.dart';
 
 class PrimaryButton extends StatelessWidget {
   const PrimaryButton({
-    required Key key,
+    Key? key,
     required this.press,
     required this.text,
     this.color = kPrimaryColor,

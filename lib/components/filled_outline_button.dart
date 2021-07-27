@@ -2,9 +2,9 @@ import 'package:flutter/material.dart';
 
 import '../constants.dart';
 
-class FIllOutlineButton extends StatelessWidget {
-  const FIllOutlineButton({
-    required Key key,
+class FillOutlineButton extends StatelessWidget {
+  const FillOutlineButton({
+    Key? key,
     this.isFilled = true,
     required this.press,
     required this.text,
@@ -21,6 +21,7 @@ class FIllOutlineButton extends StatelessWidget {
         borderRadius: BorderRadius.circular(30),
         side: BorderSide(color: Colors.white),
       ),
+      elevation: isFilled ? 2 : 0,
       color: isFilled ? Colors.white : Colors.transparent,
       onPressed: press,
       child: Text(

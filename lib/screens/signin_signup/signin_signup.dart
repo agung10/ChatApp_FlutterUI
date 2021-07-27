@@ -1,4 +1,6 @@
+import 'package:chat/components/primary_button.dart';
 import 'package:flutter/material.dart';
+import 'package:chat/screens/chats/chats_screen.dart';
 
 import '../../constants.dart';
 
@@ -19,32 +21,20 @@ class SigninOrSignupScreen extends StatelessWidget {
                 height: 146,
               ),
               Spacer(),
-              MaterialButton(
-                onPressed: () {},
-                shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.all(Radius.circular(40)),
-                ),
-                padding: EdgeInsets.all(kDefaultPadding * 0.75),
-                color: kPrimaryColor,
-                minWidth: double.infinity,
-                child: Text(
-                  "Sign In",
-                  style: TextStyle(color: Colors.white),
+              PrimaryButton(
+                text: "Sign In",
+                press: () => Navigator.push(
+                  context, 
+                  MaterialPageRoute(
+                    builder: (context) => ChatsScreen(),
+                  ),
                 ),
               ),
               SizedBox(height: kDefaultPadding * 1.5),
-              MaterialButton(
-                onPressed: () {},
+              PrimaryButton(
                 color: Theme.of(context).colorScheme.secondary,
-                shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.all(Radius.circular(40)),
-                ),
-                padding: EdgeInsets.all(kDefaultPadding * 0.75),
-                minWidth: double.infinity,
-                child: Text(
-                  "Sign Up",
-                  style: TextStyle(color: Colors.white),
-                ),
+                text: "Sign Up",
+                press: () {},
               ),
               Spacer(flex: 2),
             ],
